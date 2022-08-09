@@ -1,0 +1,112 @@
+h1 {
+    padding: 10px;
+    width: 100vw;
+    text-align: center;
+    background-color:  rgb(251, 6, 6);;
+    color: rgb(234, 234, 234);
+    margin-bottom: 20px;
+    background-image: url("dice.jpg");
+    background-size: auto;
+}
+
+.stats{
+    /* margin: auto; */
+    font-weight: 900;
+    font-size: 40px;
+    margin-left: 15em;
+    margin-right: auto;
+    width: 8em
+}
+
+
+
+body {
+   background: 
+   linear-gradient(to left, rgb(251, 6, 6),rgb(234, 234, 234));
+}
+
+ p {
+    font-weight: 800;
+    margin: 9px;
+    text-align: to right, center;
+}
+button{
+    height: 30px;
+}
+button:focus {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 0 5px;
+    background-color: #151414;
+    color:rgb(234, 234, 234) ;
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 4px rgb(251, 6, 6) ;
+    transition: 0.7s;
+    font-size: 18px;
+}
+
+.dice-players {
+    width: 0px,50px;
+    text-align: center;
+    display:inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    
+    
+}
+
+#round {
+    color: rgb(251, 6, 6);
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5em
+
+}
+
+#player1Points{
+    color: rgb(251, 6, 6);
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
+}
+
+#player2Points{
+    color: rgb(251, 6, 6);
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
+}
+
+#player1Input{
+    color: rgb(251, 6, 6);
+}
+
+
+#player2Input{
+    color: rgb(251, 6, 6);
+}
+
+.images{
+    display: flex;
+    flex-direction: column ;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+}
+
+#playerholder{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+

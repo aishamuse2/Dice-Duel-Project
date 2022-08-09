@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Duel</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1 id="title">Dice Duel</h1>
+    <h2 id="instructions">Instructions:</h2>
+    <p>
+      Players should bet a number on themselves on wheter thier going to win before rolling the Dice.
+    </p>
+    <p>
+      Once each player has put thier bets in they should Roll the dice.
+    </p>
+    <p>
+      Whoever has the higher dice roll number recives how much they betted and who ever loses subtracts what they betted from thier points.
+    </p>
+    <p>
+      Repet consecutively for 5 rounds and whoever has the most points at the end wins the game!
+    </p>
+<div class="stats"
+    <h2 id= "instructions"> Game Stats</h2>
+</div>
+
+    <!-- <style type="text/css">
+        body{
+            background-image: url("dice2.jpg");
+            background-size: auto;
+            background-repeat: no-repeat;
+        } -->
+
+    <!-- </style> -->
+
+    <div>
+      <p id="round">Round: 0</p>
+      <p id="player1Points">player 1 Points: 0</p>
+      <p id="player2Points">player 2 Points: 0</p>
+    </div>
+    <section id="playerholder">
+        <div class="images">
+            <img
+              src="https://www.nicepng.com/png/detail/1011-10112146_red-dice-png-transparent-images-dado-clipart.png"
+              width="100"
+              height="100"
+            />
+            <div class="dice-players">
+              <label for="player1Input">Player1Bet (1-10):</label>
+              <input
+                type="number"
+                id="player1Input"
+                name="player1Input"
+                min="1"
+                max="10"
+
+              />
+
+            </div>
+          </div>
+        
+    <button id="diceRoll">Roll The Dice</button>
+    <button id="newGame"> New Game </button>
+    <div class="images">
+        <img
+          src="https://www.nicepng.com/png/detail/1011-10112146_red-dice-png-transparent-images-dado-clipart.png"
+          width="100"
+          height="100"
+        />
+  
+        <div class="dice-players">
+          <label for="player2Input">Player2Bet (1-10):</label>
+          <input
+            type="number"
+            id="player2Input"
+            name="player2Input"
+            min="1"
+            max="10"
+          />
+        </div>
+      </div>
+    </section>
+    
+    
+
+   
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
