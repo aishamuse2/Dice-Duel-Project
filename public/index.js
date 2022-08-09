@@ -16,7 +16,7 @@ const diceRoll = () => {
     alert("invalid bets please retry your bets! (bets should be between 1-10)")
    return
   }
-  // alert ("     "+player1DiceRoll+"     "+player2DiceRoll+"     "+player1Bet+"    "+player2Bet)
+ 
 
   axios
     .post("/api/diceRoll", {
@@ -40,9 +40,7 @@ const diceRoll = () => {
         
       }
       getGameStats();
-      // resultsText.textContent = data
-      // diceRollBtn.classList.remove('hide')
-      //  getPlayerStats()
+      
     });
 };
 const getGameStats = () => {
@@ -67,9 +65,7 @@ axios
      "Game Has Restarted"
     );
     getGameStats();
-    // resultsText.textContent = data
-    // diceRollBtn.classList.remove('hide')
-    //  getPlayerStats()
+   
   });
  };
 diceRollBtn.addEventListener("click", diceRoll);
