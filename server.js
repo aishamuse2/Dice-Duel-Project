@@ -18,15 +18,16 @@ app.post("/api/diceroll", (req, res) => {
       gameStats.player1TotalPoints = gameStats.player1TotalPoints + player1Bet;
       gameStats.player2TotalPoints = gameStats.player2TotalPoints - player2Bet;
       gameStats.round = gameStats.round + 1;
-      message = "player1 won";
+      message = "Player 1 won!";
     }
     if (player2DiceRoll > player1DiceRoll) {
       gameStats.player2TotalPoints = gameStats.player2TotalPoints + player2Bet;
       gameStats.player1TotalPoints = gameStats.player1TotalPoints - player1Bet;
       gameStats.round = gameStats.round + 1;
-      message = "player2 won";
+      message = "Player 2 won!";
     } else {
-      message = "its a draw. play another round!";
+        if (player1DiceRoll===player2DiceRoll)
+      message = "It's a draw . Play Another Round!";
     }
     res.status(200).send({ message: message, gameStats });
   } catch (error) {
@@ -39,7 +40,7 @@ app.get("/api/gameStats", (req, res) => {
   try {
     res.status(200).send(gameStats);
   } catch (error) {
-    console.log("ERROR GETTING GAME STATS", error);
+    console.log("GAME STATS ERROR", error);
     res.sendStatus(400);
   }
 });
@@ -51,7 +52,7 @@ app.put("/api/gameStats", (req, res) => {
     gameStats.player2TotalPoints = 0;
     res.status(200).send(gameStats);
   } catch (error) {
-    console.log("ERROR GETTING GAME STATS", error);
+    console.log("GAME STATS ERROR", error);
     res.sendStatus(400);
   }
 });

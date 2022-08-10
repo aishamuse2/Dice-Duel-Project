@@ -2,12 +2,18 @@ h1 {
     padding: 10px;
     width: 100vw;
     text-align: center;
-    background-color:  rgb(251, 6, 6);;
-    color: rgb(234, 234, 234);
+    background-color:  black;;
+    color: gray;
     margin-bottom: 20px;
-    background-image: url("dice.jpg");
-    background-size: auto;
+   font-style: oblique;
 }
+
+h2{
+    font-family: cursive;
+    font-weight: 900;
+}
+
+
 
 .stats{
     
@@ -15,36 +21,27 @@ h1 {
     font-size: 40px;
     margin-left: 15em;
     margin-right: auto;
-    width: 8em
+    width: 8em;
+    font-family: fantasy;
+    
 }
 
 
 
 body {
    background: 
-   linear-gradient(to left, rgb(251, 6, 6),rgb(234, 234, 234));
+   linear-gradient(to right, rgb(234, 234, 234), black);
 }
 
  p {
     font-weight: 800;
-    margin: 9px;
+    margin: 5px;
     text-align: to right, center;
+   font-style: italic;
+   
+   
 }
-button{
-    height: 30px;
-}
-button:focus {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 0 5px 0 5px;
-    background-color: #151414;
-    color:rgb(234, 234, 234) ;
-    outline-color: transparent;
-    outline-style: solid;
-    box-shadow: 0 0 0 4px rgb(251, 6, 6) ;
-    transition: 0.7s;
-    font-size: 18px;
-}
+
 
 .dice-players {
     width: 0px,50px;
@@ -57,41 +54,52 @@ button:focus {
 }
 
 #round {
-    color: rgb(251, 6, 6);
+    color: black;
     font-weight: 700;
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 5em
-
+    width: 5em;
+    font-family: fantasy;
 }
 
 #player1Points{
-    color: rgb(251, 6, 6);
+    color: black;
     font-weight: 700;
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 8em
+    width: 10em;
+    font-family: fantasy;
 }
 
 #player2Points{
-    color: rgb(251, 6, 6);
+    color: black;
     font-weight: 700;
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 8em
+    width: 10em;
+    font-family: fantasy;
 }
 
 #player1Input{
-    color: rgb(251, 6, 6);
+    color:white;
+    background-color: #111;
+    border-radius: 5px;
+    border-color:white;
+    
 }
 
 
 #player2Input{
-    color: rgb(251, 6, 6);
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+    border-color:black;
+ 
 }
+
 
 .images{
     display: flex;
@@ -105,8 +113,79 @@ button:focus {
 #playerholder{
     display: flex;
     justify-content: space-between;
+    font-family: cursive;
+    color: gray;
 }
 
 
 
 
+
+
+
+button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
