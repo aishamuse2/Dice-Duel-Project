@@ -1,4 +1,5 @@
-# CapstoneProject
+# Dice Duel
+
 
 ## Table of content
 - [About](#about)
