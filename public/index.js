@@ -15,7 +15,7 @@ const diceRoll = () => {
     alert("Invalid bets please retry your bets! (Bets should be between 1-10)");
     return;
   }
-
+  
   axios
     .post("/api/diceRoll", {
       player1DiceRoll,
@@ -60,4 +60,4 @@ const resetGameStats = () => {
 };
 diceRollBtn.addEventListener("click", diceRoll);
 newGameBtn.addEventListener("click", resetGameStats);
-getGameStats();
+resetGameStats();

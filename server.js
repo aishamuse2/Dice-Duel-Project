@@ -7,7 +7,6 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static("public"));
 app.use(cors());
-
 app.post("/api/diceroll", (req, res) => {
   let message = "";
   try {
